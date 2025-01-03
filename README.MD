@@ -92,3 +92,45 @@ MIT License
 - Email: [邮箱地址]
 - GitHub: [GitHub链接]
 
+
+## 📝 快速开始
+
+### 环境要求
+- Python 3.9+
+- 网络摄像头
+- 现代浏览器（支持WebRTC）
+
+### 安装步骤
+
+1. 克隆仓库：
+```bash
+git clone [仓库地址]
+cd snakeAI
+```
+
+2. 创建并激活Conda环境：
+```bash
+conda env create -f environment.yml
+conda activate snakeai
+```
+
+3. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
+
+### 运行游戏
+
+1. 启动服务器：
+```bash
+python src/app.py
+```
+
+2. 在浏览器中访问：
+```
+http://localhost:8080
+```
+
+3. 允许浏览器访问摄像头权限
+
+### 游戏控制
