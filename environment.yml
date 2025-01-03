@@ -1,0 +1,9 @@
+name: snakeai
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - flask==3.0.0 

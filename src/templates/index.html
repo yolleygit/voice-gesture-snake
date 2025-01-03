@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #gameContainer {
+            margin-top: 20px;
+            position: relative;
+        }
+        #gameCanvas {
+            border: 2px solid #333;
+            background-color: #000;
+        }
+        #scoreBoard {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+        #controls {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #gestureBtn {
+            background-color: #2196F3;
+        }
+        #gestureBtn:hover {
+            background-color: #1976D2;
+        }
+        #gestureBtn.active {
+            background-color: #f44336;
+        }
+        .control-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>贪吃蛇游戏</h1>
+    <div id="scoreBoard">分数: <span id="score">0</span></div>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+    <div id="controls">
+        <div class="control-group">
+            <button id="startBtn" class="button">开始游戏</button>
+            <button id="pauseBtn" class="button" disabled>暂停</button>
+            <button id="restartBtn" class="button" disabled>重新开始</button>
+        </div>
+        <div class="control-group">
+            <button id="gestureBtn" class="button">启用手势控制</button>
+        </div>
+    </div>
+    <script src="/static/js/gesture_controller.js"></script>
+    <script src="/static/js/game.js"></script>
+</body>
+</html> 
